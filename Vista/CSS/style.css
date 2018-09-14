@@ -1,0 +1,199 @@
+
+section {
+    min-height: 20em;
+}
+
+/* estilos para las tablas*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%; 
+    alignment-adjust: central;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* imagen estilos*/
+.foto {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.foto:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    height: 90%;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* Estilos para alquiler */
+
+.cuerpo {
+    box-sizing: border-box;
+}
+
+/* Center website */
+.principal {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.texto{
+  margin-top: 20px;
+}
+
+/* Add padding BETWEEN each column */
+.columna {
+    padding: 10px;
+}
+
+/* Create three equal columns that floats next to each other */
+.columna {
+    float: left;
+    width: 30%;
+}
+
+/* Clear floats after rows */ 
+.fila:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.contenido {
+    background-color: white;
+    padding: 10px;
+}
+
+.imagen {
+  opacity: 1;
+  height: 200px;
+  transition: .5s ease;
+  backface-visibility: hidden;  
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* hover*/
+#contenedor {
+    position: relative;
+    width: 33.33%;
+}
+
+.medio {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+#contenedor:hover .contenido {
+  transition: opacity 1s;
+  opacity: 0.3;
+
+}
+
+#contenedor:hover .medio {
+  opacity: 1;
+}
+
+.botonAlq {
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
